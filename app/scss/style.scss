@@ -12,6 +12,22 @@
   }
 }
 
+.logo{
+  @extend %Rubik-500;
+  font-size: 36px;
+  line-height: 58px;
+  padding-left: 65px;
+  position: relative;
+  color: $title;
+}
+
+.logo::before{
+  content: url('../images/logo.png');
+  left: 0;
+  position: absolute;
+  margin-top: 8px;
+}
+
 .menu{
   &__list{
     display: flex;
@@ -24,6 +40,8 @@
     padding-bottom: 3px;
     transition: all .3s;
     @extend %Rubik-500;
+    font-size: 15px;
+    line-height: 12px;
     &:hover{
       color: $accent;
       border-bottom: 1px solid $accent;
@@ -83,9 +101,10 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #fff;
     top: -9px;
     right: -9px;
+    @extend %DMSans-400;
     font-size: 10px;
     line-height: 16px;
     text-align: center;
