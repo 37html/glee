@@ -1,6 +1,9 @@
 $accent: #fe3e57;
 $default: #585858;
 $title: #436372;
+$bg: #fef7f0;
+$slider: #fcd7b6;
+
 
 %DMSans-400{
   font-family: 'DMSans-Regular', sans-serif;
@@ -20,4 +23,13 @@ $title: #436372;
 %Rubik-500{
   font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
+}
+
+%btn{
+  font-size: 15px;
+  line-height: 12px;
+  padding: 22px 100px 22px 26px;
+  color: #fff;
+  background-color: #a3bbc8;
+  @extend %Rubik-500;
 }
