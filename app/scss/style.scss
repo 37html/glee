@@ -289,11 +289,122 @@
       }
     }
   }
-  
 }
 
 
+.products-info{
+  padding: 0;
+}
 
+.info{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 70px;
+  &__item{
+    display: flex;
+    background-color: $bg;
+    width: 590px;
+    padding: 35px 0 35px;
+  }
+  &__item + .info__item{
+    border-left: 1px solid #e8e4df;
+  }
+  &__item-img{
+    padding: 15px 22px 0 150px;
+  }
+  &__item-title{
+    @extend %DMSans-700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+  }
+  &__item-text{
+    @extend %DMSans-400;
+    font-size: 16px;
+    line-height: 30px;
+    width: 218px;
+    color: $default;
+  }
+}
+
+.products{
+  &__inner{
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__inner-title{
+    display: flex;
+    justify-content: center;
+    @extend %DMSans-700;
+    font-size: 36px;
+    color: #191919; 
+    margin-bottom: 35px; 
+  }
+  &__inner-menu-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+  &__inner-menu-list-item + &__inner-menu-list-item{
+    padding-left: 31px;
+  }
+  &__inner-menu-list-link{
+    @extend %DMSans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+  }
+  &__inner-menu-list-link:hover{
+    color: #191919; 
+    transition: all .3s;
+  }
+  &__inner-menu-list-link--active{
+    color: #191919; 
+    transition: all .3s;
+  }
+  &__items{
+    display: grid;
+    min-height: 800px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  &__item{
+    width: 270px;
+    height: 380px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    
+  }
+  &__item-image{
+    padding-top: 30px;
+    display: inline-block;
+    width: 270px;
+    height: 285px;
+  }
+  &__item-img{
+    display: inline-block;
+    max-width: 100%;
+  }
+  &__item-link{
+    @extend %DMSans-700;
+    font-size: 16px;
+    color: #191919;
+  }
+  &__item-link:hover{
+    color: #8b8b8b;
+    transition: all .3s;
+  }
+  &__item-price{
+    @extend %DMSans-700;
+    font-size: 16px;
+    color: #a3bbc8;
+    margin-bottom: 30px;
+  }
+}
+
+    
 
 
 
