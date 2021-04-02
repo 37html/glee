@@ -33,3 +33,11 @@ $slider: #fcd7b6;
   background-color: #a3bbc8;
   @extend %Rubik-500;
 }
+
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
