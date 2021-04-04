@@ -30,6 +30,7 @@
 }
 
 .menu{
+  margin-left: 160px;
   &__list{
     display: flex;
   }
@@ -211,6 +212,27 @@
   margin-top: 8px;
   }
 }
+
+.top{
+  background-color: #edf1f4;
+  &__container{
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding: 35px 0 35px;
+    text-align: center;
+  }
+  &__title{
+    @extend %DMSans-700;
+    font-size: 36px;
+    color: #191919; 
+    margin-bottom: 8px;
+  }
+}
+
+
+
+
 
 .top-slider{
   background-image: url('../images/ellipse.png');
@@ -712,7 +734,86 @@ padding: 100px 0;
   }
 }
 
-
+.modal{
+  padding-top: 115px;
+  max-width: 470px;
+  margin: 0 auto 120px;
+  &__label{
+    margin-bottom: 25px;
+    display: block;
+    @extend %Rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $title;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    height: 60px;
+    padding: 0 15px;
+    margin-top: 10px;
+  }
+  &__btn{
+    display: block;
+    background-color: #a3bbc8;
+    @extend %Rubik-500;
+    font-size: 18px;
+    color: #fefefe;
+    padding: 20px 0;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 35px;
+  }
+  &__label-box{
+    margin-top: 35px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f6f6f6;;
+  }
+  &__error{
+    margin-bottom: 25px;
+    @extend %Rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $title;
+  }
+  &__reg-text{
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: center;
+    @extend %Rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $title;
+  }
+  &__reg-link{
+    display: flex;
+    justify-content: center;
+    border: 2px solid #a3bbc8;;
+    @extend %Rubik-500;
+    font-size: 18px;
+    color: #243f4d;
+    height: 55px;
+    align-items: center;
+  }
+  &__partners{
+    background-color: $bg;
+  }
+  &__partners-inner{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 0 70px;
+  }
+}
     
 
   

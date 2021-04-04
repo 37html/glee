@@ -30,4 +30,32 @@ a{
   @extend %Rubik-400;
 }
 
+.breadcrumbs{
+  display: inline-flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    position: relative;
+    padding-right: 20px;
+    color: #979ba0;
+    &::after{
+      content: '/';
+      position: absolute;
+      right: 5px;
+    }
+    &:last-child{
+      color: $accent;
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }  
+  }
+  &__link{
+    color: inherit;
+  }
+}
+
   
