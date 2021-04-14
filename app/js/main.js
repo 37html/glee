@@ -1,5 +1,23 @@
 $(function () {
 
+  $('.product-one__item-num').styler();
+
+    $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
   $('.productlist1-content__filter-btn').on('click', function () {
     $('.productlist1-content__filter-btn').removeClass('productlist1-content__filter-btn--active');
     $(this).addClass('productlist1-content__filter-btn--active');
@@ -52,6 +70,16 @@ $(function () {
     spacing: "12px",
     readOnly: true
   });
+
+  $(".product-one__item-star").rateYo({
+    starWidth: "16px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "12px",
+    readOnly: true
+  });
+
+  
 
 
 });
