@@ -720,14 +720,14 @@ padding: 100px 0;
     }
   &__item-date{
     @extend %Rubik-400;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 24px;
     color: #191919;
     margin: 30px 30px 30px 0;
   }
   &__item-autor{
     @extend %Rubik-400;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 24px;
     color: #191919;
     margin: 30px 0 30px;
@@ -1270,6 +1270,7 @@ display: none;
     }
   }
 
+
  &__item{
     width: 270px;
     height: 380px;
@@ -1622,10 +1623,246 @@ display: none;
   }
 }
 
+.product-tabs__inner{
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-tabs{
+  padding-top: 100px;
+  &__top{
+    margin-bottom: 35px;
+  }
+  &__top-item{
+    @extend %Rubik-500;
+    font-size: 18px;
+    line-height: 50px;
+    color: #243f4d;
+    background-color: #edf1f4;
+    width: 240px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    & + .product-tabs__top-item{
+      margin-left: 10px;
+    }
+  }
+  &__top-item--active{
+    color: #fff;
+    background-color: #a3bbc8;
+  }
+  &__content-item{
+    display: none;
+    &.product-tabs__content-item--active{
+      display: block;
+    }
+  }
+}
 
+.related-products{
+  margin-top: 100px;
+  &__inner{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title{
+    margin-bottom: 60px;
+    @extend %DMSans-700;
+    font-size: 36px;
+    line-height: 40px;
+    color: #243f4d;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__slider{
+    width: 100%;
+  } 
+}
 
+.slick-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #edf1f4;
+  border-radius: 5px;
+  outline: none;
+  &:hover{
+    border: 1px solid #a3bbc8;
+  }
+}
 
-    
+.slick-prev {
+  right: 65px;
+  top: -60px;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.slick-next {
+  right: 0;
+  top: -60px;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.blog-page{
+  padding: 120px 0 70px;
+  &__inner{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    width: 830px;
+    margin-right: 70px;
+  }
+  &__aside{
+    width: 270px;
+  }
+  &__item-img{
+    max-width: 830px;
+    height: 500px;
+    object-fit: cover;
+  }
+  &__item-link{
+    display: block;
+  }
+  &__item-title{
+    @extend %Rubik-400;
+    font-size: 36px;
+    color: #333333;
+    margin: 35px 0;
+  }
+  &__item-text{
+    @extend %Rubik-400;
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+}
+
+.lamps__info-link-blog-page{
+  border-radius: 0px;
+  border-color: #a3bbc8;
+  color: #a3bbc8;
+  position: relative;
+  margin-bottom: 65px;
+  display: inline-block;
+  &::after{
+    background-image: url('../images/link-arrow-2.png');
+    top: 25px;
+  }
+}
+.articles__item-info-blog-page{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-left: 0;
+  background-color: #a3bbc8;
+  color: #fff;
+  width: 275px;
+  height: 75px;
+  margin-top: -75px;
+  z-index: 14;
+  position: absolute;
+}
+.articles__item-date-blog-page{
+  color: #fff;
+}
+.articles__item-autor-blog-page{
+  color: #fff;
+}
+
+.pagination__inner{
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pagination-blog-page{
+  padding-top: 25px;
+  padding-bottom: 65px;
+  margin-left: 0;
+  display: flex;
+  justify-content: start;
+}
+
+.recent-posts{
+  margin-bottom: 60px;
+  &__title{
+    color: #333333;
+    text-transform: uppercase;
+    @extend %DMSans-700;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 35px;
+    position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        background-image: url(../images/price-line.png);
+        width: 40px;
+        height: 3px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        top: 9px;
+        margin-left: 20px;
+        }
+  }
+  &__item{
+    margin-bottom: 22px;
+    display: flex;
+  }
+  &__img-link{
+    display: block;
+    min-width: 71px;
+    margin-right: 15px;
+  }
+  &__img{
+    width: 71px;
+    height: 71px;
+    object-fit: cover;
+  }
+  &__title-link{
+    @extend %Rubik-400;
+    color: #333333;
+  }
+  &__box-title{
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__date{
+    @extend %Rubik-400;
+    font-size: 12px;
+    line-height: 30px;
+    color: #9a9a9a;
+    padding-left: 20px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      background-image: url('../images/icons/calendar.svg');
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
 
     
 

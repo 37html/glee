@@ -65,7 +65,7 @@ a{
   &__list{
     display: flex;
   }
-  &__item{
+  &__item + .pagination__item{
     margin-left: 15px;
   }
   
