@@ -236,9 +236,10 @@
 }
 .terms{
   &__inner{
-  width: 1170px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 15px;
   }
   &__title{
     @extend %Rubik-500;
@@ -840,12 +841,11 @@ padding: 100px 0;
 .aboutus{
   &__inner{
     max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 120px 0 120px;
+    padding: 120px 10px 120px 10px;
   }
   &__image{
     max-height: 625px;
@@ -884,7 +884,7 @@ padding: 100px 0;
     color: #243f4d;
   }
   &__line{
-    width: 500px;
+    max-width: 500px;
     height: 60px;
     border-bottom: 2px solid #ebeef3;
   }
@@ -977,7 +977,8 @@ padding: 100px 0;
     justify-content: space-between;
   }
   &__description{
-    max-width: 330px;
+    width: 330px;
+    padding-right: 10px;
   }
   &__title{
     @extend %DMSans-700;
@@ -1061,6 +1062,9 @@ padding: 100px 0;
   &__filters{
     width: 270px;
     margin-right: 30px;
+  }
+  &__filter-btn{
+    display: none;
   }
 }
 
@@ -1948,7 +1952,8 @@ display: none;
   margin-bottom: 55px;
   &__person{
     display: flex;
-    width: 280px;
+    max-width: 280px;
+    margin-right: 15px;
     align-items: center;
   }
   &__person-img{
@@ -2340,6 +2345,19 @@ display: none;
 
 
 
+@media (max-width: 1220px){
+  .blog-one-form{
+    &__text-input{
+      width: 100%;
+    }
+  }
+  .blog-one-form__text-input+.blog-one-form__text-input{
+    margin-left: 0;
+  }
+}
+
+
+
 @media (max-width: 1200px){
   .menu {
     margin-left: 0px;
@@ -2411,6 +2429,57 @@ display: none;
       }
     }
   }
+  .recent-posts{
+    display: none;
+  }
+  .blog-page{
+    .filter__item{
+      display: none;
+    }
+    &__content{
+      width: 100%;
+      margin-right: 0;
+    }
+    &__img{
+      max-width: 100%;
+      width: 100%;
+    }
+    &__aside{
+      width: 0;
+    }
+  }
+  .contact{
+    &__box-item{
+      max-width: 260px;
+    }
+  }
+  .map{
+    &__inner{
+      display: block;
+      width: 100%;
+    }
+    &__form{
+      margin: 0 auto;
+      width: 100%;
+    }
+    #map{
+      width: 100%;
+      margin: 50px auto 0;
+    }
+    &__form-input{
+      width: 100%;
+    }
+    &__form-textarea{
+      width: 100%;
+    }
+    &__form-btn{
+      position: absolute;
+      margin-top: -400px;
+    }
+  }
+  .map__form-input+.map__form-input {
+    margin-left: 0px;
+  }
 }
 
 
@@ -2433,6 +2502,30 @@ display: none;
       padding: 15px 0 15px;
     }
   }
+  .productlist1-content{
+    &__inner{
+      justify-content: space-around;
+    }
+  }
+  .aboutus{
+    &__image{
+      max-height: 500px;
+    }
+    &__experience{
+      margin-bottom: 20px;
+    }
+    &__title{
+      margin-bottom: 0px;
+      line-height: 40px;
+    }
+    &__line{
+      height: 20px;
+      max-width: 500px;
+    }
+    &__numbers{
+      margin-top: 20px;
+    }
+  }
 }
 
 
@@ -2448,6 +2541,50 @@ display: none;
       margin-right: 0;
       margin-bottom: 120px;
     }
+  }
+  .product-slide{
+    &__thumb{
+      display: none;
+    }
+  }
+  .product-one{
+    &__slide{
+      width: auto;
+    }
+  }
+  .aboutus{
+    &__numbers-img{
+      display: none;
+    }
+    &__line{
+      max-width: 330px;
+    }
+  }
+  .aboutus .numbers-item-extra::after{
+    display: none;
+  }
+  .aboutus .numbers-item-extra::before{
+    display: none;
+  }
+  .ourteam{
+    &__contacts{
+      flex-direction: column;
+      width: 200px;
+      align-items: start;
+    }
+    &__contacts-social{
+      margin-right: 0;
+      margin-left: 20px;
+    }
+    &__contacts-name{
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  .related-products{
+    display: none;
   }
 }
 
@@ -2537,6 +2674,22 @@ display: none;
         max-width: 175px;
       }
     }
+    .blog-page {
+      padding: 40px 0 15px;
+      &__item-title{
+      margin: 15px 0;
+      line-height: 44px;
+      }
+      &__item-text{
+        margin-bottom: 15px;
+      }
+  }
+  .contact {
+    &__box-item{
+      padding: 20px 10px 0 10px;
+      height: 300px;
+    }
+  }
 }
 
 
@@ -2557,8 +2710,91 @@ display: none;
       margin: 15px 40px;
     }
   }
+  .modal{
+    padding-top: 50px;
+    margin: 0 auto 35px;
+    &__partners-inner{
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0 10px;
+    }
+    &__partners-item{
+      margin: 15px 40px;
+    }
+  }
+  .blog-one{
+    h4{
+      line-height: 40px;
+    }
+  }
+  .product-one{
+    &__inner{
+      display: block;
+    }
+    &__content{
+      width: 100%;
+      margin-top: 35px;
+    }
+    &__slide{
+      margin-right: 0;
+    }
+  }
+  .product-slide{
+    &__big{
+      width: 100%;
+      padding-left: 0;
+      img{
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+  .aboutus{
+    &__inner{
+      padding: 50px 10px 50px 10px;
+    }
+    &__image{
+      max-height: 380px;
+    }
+    &__experience{
+      margin-bottom: 0;
+    }
+    &__experience-num{
+      font-size: 80px;
+      margin-right: 18px;
+    }
+    &__experience-text{
+      line-height: 22px;
+    }
+    &__title{
+      font-size: 30px;
+      line-height: 30px;
+    }
+    &__line{
+      height: 0;
+    }
+    &__numbers-item{
+      margin-right: 25px;
+    }
+    &__number-info{
+      font-size: 28px;
+    }
+    &__text{
+      line-height: 24px;
+    }
+    &__numbers{
+      margin-top: 5px;
+    }
+    &__image{
+      margin-right: 20px;
+    }
+  }
+  .work-info{
+    &__inner{
+      padding: 30px 0 30px;
+    }
+  }
 }
-
 
 
 @media (max-width: 850px){
@@ -2587,6 +2823,96 @@ display: none;
       display: none;
     }
   }
+  .contact{
+    margin: 60px 0;
+    &__box{
+      display: block;
+      width: 100%;
+    }
+    &__box-item{
+      min-width: 100%;
+      margin-bottom: 15px;
+      height: 220px;
+    }
+    &__box-item-img-box{
+      margin-bottom: 15px;
+    }
+    &__title{
+      margin-bottom: 40px;
+    }
+  }
+  .productlist1{
+    &__inner{
+      display: block;
+    }
+    &__filters{
+      width: 100%;
+      margin-right: 0;
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      padding-right: 20px;
+      z-index: 100;
+      background: #fff;
+    }
+    &__filter-btn{
+      display: block;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      position: fixed;
+      right: 0;
+      z-index: 101;
+      bottom: 50px;
+    }
+  }
+  .productlist1-content{
+    &__inner{
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 800px){
+  .productlist1-content{
+    &__filter-buttons{
+      display: none;
+    }
+  }
+  .product-tabs{
+    padding-top: 50px;
+    &__top-item{
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  .product-tabs__top-item+.product-tabs__top-item {
+    margin-left: 0px;
+  }
+  .articles {
+    padding-top: 50px;
+  }
+  .work-info{
+    &__inner{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  }
+  .ourteam{
+    padding: 50px 0 50px;
+    &__inner{
+      display: block;
+    }
+    &__description{
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }  
 }
 
 
@@ -2601,6 +2927,31 @@ display: none;
       img{
         width: 100%;
       }
+    }
+  }
+  .blog-one-comments{
+    &__item-img{
+      display: none;
+    }
+    &__item-two{
+      margin-left: 0;
+    }
+  }
+  .product-one {
+    margin-top: 50px;
+  }
+  .aboutus{
+    &__image{
+      display: none;
+    }
+    &__experience{
+      margin-bottom: 14px;
+    }
+    &__title{
+      margin-bottom: 14px;
+    }
+    &__line{
+      height: 12px;
     }
   }
 }
@@ -2691,7 +3042,94 @@ display: none;
     margin-left: 30px;
     width: 95px;
   }
+  .articles{
+    &__item-info-blog-page{
+    width: 210px;
+    height: 40px;
+    margin-top: -40px;
+    }
+  }
+  .blog-page{
+    &__item-title{
+    margin: 10px 0;
+    line-height: 30px;
+    font-size: 26px;
+    }
+    &__item-text{
+      line-height: 26px;
+    }
+  }
+  .lamps{
+    &__info-link-blog-page{
+      margin-bottom: 40px;
+    }
+  }
+  .block-one-box{
+    &__person-img{
+      display: none;
+    }
+  }
+  .blog-one{
+    h4{
+      margin: 10px 0;
+      line-height: 30px;
+      font-size: 26px;
+    }
+    h5{
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+    p{
+      line-height: 26px;
+      margin-bottom: 15px;
+    }
+    blockquote{
+      padding: 20px 30px 20px 20px;
+      line-height: 26px;
+    }
+    h6{
+      padding: 0 0;
+    }
+  }
+  .blog-one .block-one__left-img{
+    display: none;
+  }
+  .block-one-box{
+    &__share-link{
+    margin-left: 10px;
+    }
+  }
+  .block-one-box{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    &__share{
+      width: 155px;
+    }
+  }
+  .blog-one-comments{
+    &__title{
+      margin-bottom: 20px;
+    }
+  }
+  .blog-one-form{
+    &__textarea{
+      margin-bottom: 20px;
+    }
+  } 
 }
+
+      
+@media (max-width: 580px){
+  .productlist1-content{
+    &__item{
+      width: 100%;
+    }
+    &__img-box{
+      width: 100%;
+    }
+  }
+}
+    
 
 
 @media (max-width: 500px){
@@ -2765,10 +3203,57 @@ display: none;
     font-size: 26px;
     width: 185px;
   }
+  .top{
+    &__title{
+      font-size: 30px;
+    }
+  }
+  .terms{
+    &__title{
+      margin: 10px 0 10px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    &__item{
+      font-size: 14px;
+      line-height: 22px;
+      padding-bottom: 10px;
+    }
+    &__text{
+          padding-bottom: 0;
+    }
+  }
+  .product-one{
+    &__item-btn{
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+  .ourteam{
+    &__contacts{
+      justify-content: center;
+      height: auto;
+      width: 170px;
+    }
+    &__contacts-name{
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &__contacts-profecion{
+      line-height: 18px;
+    }
+  }
 }
 
 
-
+@media (max-width: 450px){
+  .ourteam{
+    &__team-box{
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 60px 30px;
+    }
+  }
+}
 
 
 

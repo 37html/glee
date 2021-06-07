@@ -5,6 +5,11 @@ $(function () {
   });
 
 
+  $('.productlist1__filter-btn').on('click', function () {
+    $('.productlist1__filters').slideToggle();
+  });
+
+
   $('.product-tabs__top-item').on('click', function(e){
     e.preventDefault();
     $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
@@ -32,7 +37,15 @@ $(function () {
     asNavFor: '.product-slide__thumb',
     draggable: false,
     arrows: false,
-    fade: true
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 881,
+        settings: {
+          draggable: true,
+        }
+      }
+    ]
   });
 
   $('.productlist1-content__filter-btn').on('click', function () {
